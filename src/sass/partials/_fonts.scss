@@ -1,0 +1,44 @@
+//Fonts
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  font-style: normal;
+  font-weight: 800;
+  color: $title-color;
+  text-rendering: optimizeLegibility;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+  color: $title-color;
+}
+
+h1, .h1 { font-size: 3rem; line-height: 1; }
+h2, .h2 { font-size: 1.6rem; font-weight: 400; }
+h3, .h3 { font-size: 1.56rem; margin-bottom: 1.8rem; }
+h4, .h4 { font-size: 1.25rem; }
+
+p {
+  font-size: 1rem;
+  padding: 0 0 20px 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+a {
+    line-height: inherit;
+    color: $a-color;
+    text-decoration: $a-text-decoration;
+    cursor: pointer; 
+  
+  &:hover, &:focus {
+    color: $a-hover-color;
+  }
+    
+  img { border: 0; }
+}

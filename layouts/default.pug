@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="lt")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{sitename} - #{title}
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&amp;subset=latin-ext" rel="stylesheet")
+        link(rel="stylesheet", href=siteurl + "css/style.css")
+        script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
+        
+    body
+      block header
+       include ./partials/header.pug
+
+      block promo
+       include ./partials/promo.pug
+
+      block main
+       include ./partials/main.pug
+       
+      block footer
+       include ./partials/footer.pug
+       include ./partials/netlify-identity.html
+       
