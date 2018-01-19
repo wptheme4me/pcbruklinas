@@ -21,6 +21,17 @@ collections:
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
       - {label: "Renginys", name: "author", widget: "relation", collection: "renginys", searchFields: "[title]", valueField: "title" }
+        - label: "Pasirinkimas 1"
+          name: "pasirinkimas"
+          widget: "select"
+          options: ["vienas", "du", trys]
+        - label: "Pasirinkimas 2"
+          name: "pasirinkimas2"
+          widget: "select"
+          options:
+            - { label: "Chicago", value: "ORD" }
+            - { label: "Paris", value: "CDG" }
+            - { label: "Tokyo", value: "HND" }
   - name: "drabuziai" # Used in routes, e.g., /admin/collections/blog
     label: "Drabužių parduotuvės" # Used in the UI
     folder: "src/parduotuves/drabuziai" # The path to the folder where the documents are stored
