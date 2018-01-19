@@ -70,7 +70,7 @@ collections:
       - label: "Parduotuves"
         name: "kokia_parduotuve"
         widget: "relation"
-        collection: "akcijos"
+        collection: "avaline"
         searchFields: ["title", "body"]
         valueField: "title"
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "renginys.pug"}
