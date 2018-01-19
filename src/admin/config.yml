@@ -6,6 +6,8 @@ media_folder: "src/img/uploads" # Media files will be stored in the repo under s
 public_folder: "img/uploads"  # The src attribute for uploaded media will begin with img/uploads
 
 collections:
+  - name: "parduotuves"
+    label: "Visos parduotuves"
   - name: "avaline" # Used in routes, e.g., /admin/collections/blog
     label: "Avalinės parduotuvės" # Used in the UI
     folder: "src/parduotuves/avaline" # The path to the folder where the documents are stored
@@ -19,6 +21,12 @@ collections:
       - {label: "Darbo laikas", name: "darbo_laikas", widget: "string"}
       - {label: "Interneto adresas", name: "www", widget: "string"}
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
+      - label: "Akcijos"
+        name: "akcijos"
+        widget: "relation"
+        collection: "akcijos"
+        searchFields: ["title", "body"]
+        valueField: "title"
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
   - name: "drabuziai" # Used in routes, e.g., /admin/collections/blog
     label: "Drabužių parduotuvės" # Used in the UI
@@ -33,6 +41,12 @@ collections:
       - {label: "Darbo laikas", name: "darbo_laikas", widget: "string"}
       - {label: "Interneto adresas", name: "www", widget: "string"}
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
+      - label: "Akcijos"
+        name: "akcijos"
+        widget: "relation"
+        collection: "akcijos"
+        searchFields: ["title", "body"]
+        valueField: "title"
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
   - name: "aksesuarai-dovanos" # Used in routes, e.g., /admin/collections/blog
     label: "Aksesuarų ir dovanų parduotuvės" # Used in the UI
@@ -67,12 +81,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Aktyvus", name: "aktyvus", widget: "boolean"}
       - {label: "Pavadinimas", name: "title", widget: "string"}
-      - label: "Parduotuves"
-        name: "kokia_parduotuve"
-        widget: "relation"
-        collection: "avaline"
-        searchFields: ["title", "body"]
-        valueField: "title"
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "renginys.pug"}
       - {label: "Akcijos pradžios data", name: "akcijos_pradzia", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Akcijos pabaigos data", name: "akcijos_pabaiga", widget: "date", format: "YYYY-MM-DD"}
