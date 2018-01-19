@@ -20,15 +20,6 @@ collections:
       - {label: "Interneto adresas", name: "www", widget: "string"}
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
-      - {label: "Renginys", name: "author", widget: "relation", collection: "renginys", searchFields: "[title]", valueField: "title" }
-      - {label: "Pasirinkimas 1", name: "pasirinkimas", widget: "select", options: ["vienas", "du", trys] }
-      - label: "Pasirinkimas 2"
-        name: "pasirinkimas"
-        widget: "object"
-        fields:
-          - { label: "Viena", name: "string", widget: "string"}
-          - { label: "Taip/Ne", name: "boolean", widget: "boolean"}
-          - { label: "Logo", name: "logo_image", widget: "image"}
   - name: "drabuziai" # Used in routes, e.g., /admin/collections/blog
     label: "Drabužių parduotuvės" # Used in the UI
     folder: "src/parduotuves/drabuziai" # The path to the folder where the documents are stored
@@ -69,3 +60,21 @@ collections:
       - {label: "Renginio data (nuo-iki)", name: "renginio_data", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Nuotrauka", name: "renginio_img", widget: "image"}
       - {label: "Aprašymas", name: "body", widget: "markdown"}
+  - name: "akcijos" # Used in routes, e.g., /admin/collections/blog
+    label: "Akcijos" # Used in the UI
+    folder: "src/akcijos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Aktyvus", name: "aktyvus", widget: "boolean"}
+      - {label: "Pavadinimas", name: "title", widget: "string"}
+      - {label: "Šablonas", name: "layout", widget: "hidden", default: "renginys.pug"}
+      - {label: "Akcijos pradžios data", name: "akcijos_pradzia", widget: "date", format: "YYYY-MM-DD"}
+      - {label: "Akcijos pabaigos data", name: "akcijos_pabaiga", widget: "date", format: "YYYY-MM-DD"}
+      - {label: "Nuotrauka", name: "renginio_img", widget: "image"}
+      - {label: "Aprašymas", name: "body", widget: "markdown"}
+      - label: "Parduotuvės"
+        name: "akcija_parduotuve"
+        widget: "relation"
+        collection: "avaline"
+        searchFields: "[title, mail]"
+        valueField: "title"
