@@ -1,6 +1,7 @@
 ---
 title: MIDI DILEMA
 kokia_akcija: 'Akcija #1'
+logo: 
 layout: parduotuve.pug
 tipas: Avalinė
 tel: 8 686 92817
