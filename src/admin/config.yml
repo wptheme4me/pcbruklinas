@@ -28,7 +28,7 @@ collections:
         fields:
           - { label: "Viena", name: "string", widget: "string"}
           - { label: "Taip/Ne", name: "boolean", widget: "boolean"}
-          - { label: "Logo", name: "image", widget: "image"}
+          - { label: "Logo", name: "logo_image", widget: "image"}
   - name: "drabuziai" # Used in routes, e.g., /admin/collections/blog
     label: "Drabužių parduotuvės" # Used in the UI
     folder: "src/parduotuves/drabuziai" # The path to the folder where the documents are stored
