@@ -72,9 +72,9 @@ collections:
       - {label: "Akcijos pabaigos data", name: "akcijos_pabaiga", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Nuotrauka", name: "renginio_img", widget: "image"}
       - {label: "Aprašymas", name: "body", widget: "markdown"}
-      - label: "Parduotuvės"
-        name: "akcija_parduotuve"
-        widget: "relation"
-        collection: "avaline"
-        searchFields: "[title, mail]"
-        valueField: "title"
+      - label: "Kokia akcija"
+        name: "kokia_akcija"
+        widget: "list"
+        fields:
+          - {label: "Nuotraukos title", name: "nuotraukos_title", widget: "string"}
+          - {label: "Nuotrauka", name: "nuotrauka", widget: "image"}
