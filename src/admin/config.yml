@@ -20,6 +20,12 @@ collections:
       - {label: "Interneto adresas", name: "www", widget: "string"}
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
+      - label: "Renginys"
+        name: "author"
+        widget: "relation"
+        collection: "renginys"
+        searchFields: "[title]"
+        valueField: "title"
   - name: "drabuziai" # Used in routes, e.g., /admin/collections/blog
     label: "Drabužių parduotuvės" # Used in the UI
     folder: "src/parduotuves/drabuziai" # The path to the folder where the documents are stored
