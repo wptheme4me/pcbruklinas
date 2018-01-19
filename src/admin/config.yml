@@ -14,6 +14,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - {label: "Parduotuvės pavadinimas", name: "title", widget: "string"}
+      - label: "Akcijos"
+        name: "kokia_akcija"
+        widget: "relation"
+        collection: "akcijos"
+        searchFields: ["title", "body"]
+        valueField: "title"
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Avalinė"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
@@ -21,12 +27,6 @@ collections:
       - {label: "Darbo laikas", name: "darbo_laikas", widget: "string"}
       - {label: "Interneto adresas", name: "www", widget: "string"}
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
-      - label: "Akcijos"
-        name: "akcijos"
-        widget: "relation"
-        collection: "akcijos"
-        searchFields: ["title", "body"]
-        valueField: "title"
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
   - name: "drabuziai" # Used in routes, e.g., /admin/collections/blog
     label: "Drabužių parduotuvės" # Used in the UI
@@ -41,12 +41,6 @@ collections:
       - {label: "Darbo laikas", name: "darbo_laikas", widget: "string"}
       - {label: "Interneto adresas", name: "www", widget: "string"}
       - {label: "Vieta žemėlapyje", name: "map", widget: "string"}
-      - label: "Akcijos"
-        name: "akcijos"
-        widget: "relation"
-        collection: "akcijos"
-        searchFields: ["title", "body"]
-        valueField: "title"
       - {label: "Parduotuvės aprašymas", name: "body", widget: "markdown"}
   - name: "aksesuarai-dovanos" # Used in routes, e.g., /admin/collections/blog
     label: "Aksesuarų ir dovanų parduotuvės" # Used in the UI
