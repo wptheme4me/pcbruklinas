@@ -6,8 +6,6 @@ media_folder: "src/img/uploads" # Media files will be stored in the repo under s
 public_folder: "img/uploads"  # The src attribute for uploaded media will begin with img/uploads
 
 collections:
-  - name: "parduotuves"
-    label: "Visos parduotuves"
   - name: "avaline" # Used in routes, e.g., /admin/collections/blog
     label: "Avalinės parduotuvės" # Used in the UI
     folder: "src/parduotuves/avaline" # The path to the folder where the documents are stored
