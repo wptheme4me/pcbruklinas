@@ -78,3 +78,9 @@ collections:
         fields:
           - {label: "Nuotraukos title", name: "nuotraukos_title", widget: "string"}
           - {label: "Nuotrauka", name: "nuotrauka", widget: "image"}
+      - label: "Parduotuves"
+        name: "kokia_parduotuve"
+        widget: "relation"
+        collection: "avaline"
+        searchFields: ["title", "body"]
+        valueField: "title"
