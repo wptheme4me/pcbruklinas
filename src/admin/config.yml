@@ -81,6 +81,8 @@ collections:
       - label: "Parduotuves"
         name: "kokia_parduotuve"
         widget: "relation"
-        collection: "avaline"
+        collection: "akcijos"
         searchFields: ["title", "body"]
         valueField: "title"
+        fields:
+          - {label: "Nuotraukos title", name: "title", widget: "string"}
