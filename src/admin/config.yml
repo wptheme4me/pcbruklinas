@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "src/img/uploads" # Media files will be stored in the repo under src/img/uploads
-public_folder: "img/uploads"  # The src attribute for uploaded media will begin with img/uploads
+media_folder: "src/img" # Media files will be stored in the repo under src/img/uploads
+public_folder: "img"  # The src attribute for uploaded media will begin with img/uploads
 
 collections:
   - name: "avaline" # Used in routes, e.g., /admin/collections/blog
@@ -18,6 +18,7 @@ collections:
         collection: "akcijos"
         searchFields: ["title", "body"]
         valueField: "title"
+      - {label: "Logotipas", name: "logo", widget: "image", default: "/img/default.png"}
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Avalinė"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
@@ -32,6 +33,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - {label: "Parduotuvės pavadinimas", name: "title", widget: "string"}
+      - {label: "Logotipas", name: "logo", widget: "image", default: "/img/default.png"}
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Drabužiai"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
@@ -46,7 +48,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - {label: "Parduotuvės pavadinimas", name: "title", widget: "string"}
-      - {label: "Logotipas", name: "logo", widget: "image"}
+      - {label: "Logotipas", name: "logo", widget: "image", default: "/img/default.png"}
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Aksesuarai ir dovanos"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
