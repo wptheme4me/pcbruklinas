@@ -67,6 +67,12 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Aktyvus", name: "aktyvus", widget: "boolean"}
       - {label: "Pavadinimas", name: "title", widget: "string"}
+      - label: "Parduotuves"
+        name: "kokia_parduotuve"
+        widget: "relation"
+        collection: "akcijos"
+        searchFields: ["title", "body"]
+        valueField: "title"
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "renginys.pug"}
       - {label: "Akcijos pradžios data", name: "akcijos_pradzia", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Akcijos pabaigos data", name: "akcijos_pabaiga", widget: "date", format: "YYYY-MM-DD"}
@@ -78,11 +84,3 @@ collections:
         fields:
           - {label: "Nuotraukos title", name: "nuotraukos_title", widget: "string"}
           - {label: "Nuotrauka", name: "nuotrauka", widget: "image"}
-      - label: "Parduotuves"
-        name: "kokia_parduotuve"
-        widget: "relation"
-        collection: "akcijos"
-        searchFields: ["title", "body"]
-        valueField: "title"
-        fields:
-          - {label: "Nuotraukos title", name: "title", widget: "string"}
