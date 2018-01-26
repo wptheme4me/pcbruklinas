@@ -13,21 +13,56 @@ h4, .h4 {
   color: $title-color;
 }
 
-h1, .h1 { font-size: 3rem; line-height: 1; }
-h2, .h2 { font-size: 1.6rem; font-weight: 400; }
-h3, .h3 { font-size: 1.56rem; margin-bottom: 1.8rem; }
-h4, .h4 { font-size: 1.25rem; }
+// Font sizes for mediaqueries: font-size, margin-bottom
+$headers-small: ( 
+  h1: 2rem 3rem,
+  h2: 1.8rem 3rem,
+  h3: 1.6rem 3rem,
+  h4: 18 3rem,
+  h5: 17 3rem,
+  h6: 16 3rem
+);
+
+$headers-medium: (
+  h1: 2rem 3rem,
+  h2: 1.8rem 3rem,
+  h3: 1.6rem 3rem,
+  h4: 18 3rem,
+  h5: 17 3rem,
+  h6: 16 3rem
+);
+
+$headers-medium-up: (
+  h1: 2rem 3rem,
+  h2: 1.8rem 3rem,
+  h3: 1.6rem 3rem,
+  h4: 18 3rem,
+  h5: 17 3rem,
+  h6: 16 3rem
+);
+
+$headers-large: (
+  h1: 2rem 3rem,
+  h2: 1.8rem 3rem,
+  h3: 1.6rem 3rem,
+  h4: 18 3rem,
+  h5: 17 3rem,
+  h6: 16 3rem
+);
+
+$headers-large-up: (
+  h1: 2rem 3rem,
+  h2: 1.8rem 3rem,
+  h3: 1.6rem 3rem,
+  h4: 18 3rem,
+  h5: 17 3rem,
+  h6: 16 3rem
+);
 
 p {
   font-size: 1rem;
   padding: 0 0 20px 0;
   margin: 0;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0 0 40px 0;
-  padding: 0;
 }
 
 a {

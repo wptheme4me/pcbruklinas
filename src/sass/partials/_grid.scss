@@ -4,7 +4,6 @@
     display: block;
     margin: 0 auto; //horizontally center
     padding: 100px 0;
-    width: $row-width;
     background: $row-background-color;
     height: auto;
 }
@@ -30,7 +29,7 @@
 .c0 { width: 100%;}
 .c1 { width: 10%; }
 .c2 { width: 20%; }
-.c3 { width: 33.3%; }
+.c3 { width: 30%; }
 .c4 { width: 40%; }
 .c5 { width: 50%; }
 .c6 { width: 60%; }

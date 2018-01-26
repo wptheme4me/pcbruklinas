@@ -2,17 +2,24 @@ extends ./default.pug
 
 block main
  .r
-  .c0
+  .c2
    h1 Visos parduotuvės
+   ul
+    each filtras in ['shop', 'maistas-gerimai', 'sporto-laisvalaikio']
+     li(onclick="changes('" + filtras + "')") #{filtras}
+  .c8
    each page in collections.parduotuves
     if (page.layout == 'parduotuve.pug')
-     .c3
+     .shop(class=page.filtras)
+      -var imgurl = page.logo || 'img/logo.png'
+      img(src= siteurl + imgurl, alt=page.title)
       h2
        a(href=siteurl + page.path) #{page.title}
-      img(src=page.logo, alt=page.title)
-      p #{page.tipas}
-      p Vieta žemėlapyje: #{pagemap}
-      p Telefono nr.:#{page.tel}
-      p El.pašto adresas: #{page.mail}
-      p Darbo laikas: #{page.darbo_laikas}
-      p Vieta žemėlapyje: #{pagemap}
+      p.tipas #{page.tipas}
+      //-   p Vieta žemėlapyje: #{pagemap}
+      //-   p Telefono nr.:#{page.tel}
+      //-   p El.pašto adresas: #{page.mail}
+      p.laikas!= page.darbo_laikas
+      //-   p Vieta žemėlapyje: #{pagemap}
+
+ include ./partials/filter.html

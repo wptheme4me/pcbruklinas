@@ -18,8 +18,9 @@ collections:
         collection: "akcijos"
         searchFields: ["title", "body"]
         valueField: "title"
-      - {label: "Logotipas", name: "logo", widget: "image", default: "/img/default.png"}
+      - {label: "Logotipas", name: "logo", widget: "image"}
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
+      - {label: "Filtras", name: "filtras", widget: "hidden", default: "avaline"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Avalinė"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
       - {label: "Kontaktinis el.pašto adresas", name: "mail", widget: "string"}
@@ -35,6 +36,7 @@ collections:
       - {label: "Parduotuvės pavadinimas", name: "title", widget: "string"}
       - {label: "Logotipas", name: "logo", widget: "image", default: "/img/default.png"}
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
+      - {label: "Filtras", name: "filtras", widget: "hidden", default: "drabuziai"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Drabužiai"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
       - {label: "Kontaktinis el.pašto adresas", name: "mail", widget: "string"}
@@ -50,6 +52,7 @@ collections:
       - {label: "Parduotuvės pavadinimas", name: "title", widget: "string"}
       - {label: "Logotipas", name: "logo", widget: "image", default: "/img/default.png"}
       - {label: "Šablonas", name: "layout", widget: "hidden", default: "parduotuve.pug"}
+      - {label: "Filtras", name: "filtras", widget: "hidden", default: "aksesuarai"}
       - {label: "Parduotuvės kategorija", name: "tipas", widget: "hidden", default: "Aksesuarai ir dovanos"}
       - {label: "Kontaktinis telefonas", name: "tel", widget: "string"}
       - {label: "Kontaktinis el.pašto adresas", name: "mail", widget: "string"}

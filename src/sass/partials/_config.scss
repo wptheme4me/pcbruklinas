@@ -1,11 +1,15 @@
 // Default font
-$font-family: 'Open Sans', sans-serif;
+$font-family: 'Noto Sans', sans-serif;
 
 //default row with
-$row-width: 90%;
+$row-small-width: 96%; $row-small-border: red;
+$row-medium-width: 96%; $row-medium-border: green; 
+$row-medium-up-width: 90%; $row-medium-up-border: blue;
+$row-large-width: 90%; $row-large-border: maroon;
+$row-large-up-width: 80%; $row-large-up-border: pink;
 
 //columns
-$columns-border: none;
+$columns-border: none; 
 $columns-float: left;
 
 $img-border: none;
@@ -28,19 +32,21 @@ body {
     font-weight: normal;
     color: $text-main-color;
     line-height: 150%;
-    background: #f2f2f2;
-    overflow-x: hidden;
+    background: $body-color;
+}
 
-    // &:after {
-    //     position: absolute;
-    //     top: 100px; left: 850px;
-    //     display: block;
-    //     box-sizing: border-box;
-    //     height: 150%;
-    //     width: 50%;
-    //     background: rgba(216, 140, 0, 0.035);
-    //     content: '';
-    //     z-index: -2;
-    //     transform: rotate(45deg);
-    // }
+// Mixins
+@mixin rows($row-width, $border-color) {
+    width: $row-width; 
+    // true/false: show/hide borders
+    @if false { border:1px solid $border-color; }
+}
+
+@mixin fonts($screen-size) {
+  @each $header, $size in $screen-size {
+    #{$header} { 
+      font-size: nth($size, 1);
+      margin-bottom: nth($size, 2);
+    }
+  }
 }

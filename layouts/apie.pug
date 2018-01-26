@@ -1,0 +1,18 @@
+extends ./default.pug
+
+block main
+ .r
+  .c2
+   h1 Kontaktai
+   each vv in kontaktai
+    .kontaktai
+     p <b> #{vv.kontaktas} </b> 
+     p #{vv.kontaktinis_asmuo} 
+     p #{vv.kontaktinis_telefonas} 
+     p #{vv.kontaktinis_elpastas}
+  .c1
+  .c5
+   h1 #{title}
+   p!= contents
+
+   
