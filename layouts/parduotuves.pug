@@ -1,13 +1,23 @@
 extends ./default.pug
 
 block main
+ section
  .r
-  .c2
-   h1 Visos parduotuvės
-   ul
-    each filtras in ['shop', 'maistas-gerimai', 'sporto-laisvalaikio']
-     li(onclick="changes('" + filtras + "')") #{filtras}
-  .c8
+  .c0
+   h2 prekybos centre rasite
+   h3 Parduotuvės, paslaugos ir pramogos
+  .c0 
+   <div class="grand"><img src="http://localhost:3000/img/norfa.png" alt="Norfa"/><h2><a href="http://localhost:3000/parduotuves\maistas-gerimai/vynoteka.html">NORFA</a></h2><p class="tipas">Maisto prekės, gėrimai</p><p class="laikas"><b>I-VI</b> 10:00-20:00 <br/> <b>VII</b> 10:00-15:00</p></div>
+   <div class="grand"><img src="http://localhost:3000/img/senukai.png" alt="Senukai"/><h2><a href="http://localhost:3000/parduotuves\maistas-gerimai/vynoteka.html">SENUKAI</a></h2><p class="tipas">Statybos, remonto ir buities prekės</p><p class="laikas"><b>I-VI</b> 10:00-20:00 <br/> <b>VII</b> 10:00-15:00</p></div>
+   <div class="grand"><img src="http://localhost:3000/img/thomas-philipps.png" alt="Thomas Philipps"/><h2><a href="http://localhost:3000/parduotuves\maistas-gerimai/vynoteka.html">THOMAS PHILIPPS</a></h2><p class="tipas">Buitinės prekės</p><p class="laikas"><b>I-VI</b> 10:00-20:00 <br/> <b>VII</b> 10:00-15:00</p></div>
+   <div class="grand"><img src="http://localhost:3000/img/elektromarkt.png" alt="Elektromarkt"/><h2><a href="http://localhost:3000/parduotuves\maistas-gerimai/vynoteka.html">ELEKTROMARKT</a></h2><p class="tipas">Buitinė elektrotechnika, kompiuterinė įranga</p><p class="laikas"><b>I-VI</b> 10:00-20:00 <br/> <b>VII</b> 10:00-15:00</p></div>
+  .c0
+   .white
+    p Rodyti pagal pasirinktą specializaciją:
+    ul
+     each pavadinimas, filtras in {'maistas-gerimai': 'Maisto prekės, gėrimai', 'sporto-laisvalaikio': 'Sportas, laisvalaikis', 'avaline-galanterija': 'Avalinė, galanterija', 'drabuziai': 'Drabužiai', 'juvelyrika': 'Juvelyrika', 'kanceliarines': 'Kanceliarinės', 'specializuotos': 'Specializuotos prekės', 'aksesuarai': 'Aksesuarai, dovanos', 'kosmetika': 'Kosmetika,sveikata', 'technika': 'Namų prekės, technika', 'vaikams': 'Vaikų prekės', 'shop': 'Visos parduotuvės' }
+      li(onclick="changes('" + filtras + "')") #{pavadinimas}
+
    each page in collections.parduotuves
     if (page.layout == 'parduotuve.pug')
      .shop(class=page.filtras)

@@ -7,7 +7,7 @@ filtras: maistas-gerimai
 tipas: Maisto prekės, gėrimai
 tel: +370 639 46358
 mail: epastas-robertagald@inbox.lt
-darbo_laikas: 'I-VI 10:00-20:00 <br/> VII 10:00-15:00'
+darbo_laikas: '<b>I-VI</b> 10:00-20:00 <br/> <b>VII</b> 10:00-15:00'
 www: www.vynoteka.lt
 map: '122'
 ---

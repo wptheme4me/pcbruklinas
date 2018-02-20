@@ -5,6 +5,12 @@ $position: relative;
     float: right;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .center-both {
     position: absolute;
     top: 50%;
@@ -35,4 +41,8 @@ $padding: 40px;
 
 .text-left {
     text-align: left;
+}
+
+.text-center {
+    text-align: center;
 }
