@@ -8,7 +8,7 @@ var sass = require('metalsmith-sass')
 metalsmith(__dirname)
   .metadata({
     sitename: 'PC Bruklinas',
-    siteurl: 'https://brave-swartz-8e578a.netlify.com/'
+    siteurl: 'https://pcbruklinas-concept.netlify.com/'
   })
   .source('src')
   .destination('build')
