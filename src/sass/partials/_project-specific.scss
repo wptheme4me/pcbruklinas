@@ -1,17 +1,23 @@
 .shop {
-    box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
     float: left;
-    height: 320px;
-    width: 23%;
+    height: 360px;
+    width: 31.3%;
     min-width: 250px;
-    margin: 0 20px 20px 0;
-    background: $body-color;
+    margin: 0px 0px 20px 20px;
+    background: white;
     border: 1px solid rgb(221, 221, 221);
     opacity: 1;
     transition: opacity 0.5s;
     text-align: center;
-    // box-shadow: 0px 3px 30px -9px rgba(131, 131, 131, 0.75);
+    box-shadow: 0px 3px 30px -9px rgba(131, 131, 131, 0.75);
+
+    &:after{
+        content: " ";
+        display: table;
+        clear: both;
+    }
     
     img {
         position: relative;
@@ -92,13 +98,13 @@
     }
 }
 
-.maistas-gerimai {
-    box-shadow: 0px 3px 30px -9px rgba(240, 68, 68, 0.75);
-}
+// .maistas-gerimai {
+//     box-shadow: 0px 3px 30px -9px rgba(240, 68, 68, 0.75);
+// }
 
-.sporto-laisvalaikio {
-    box-shadow: 0px 3px 30px -9px rgba(46, 126, 39, 0.75);
-}
+// .sporto-laisvalaikio {
+//     box-shadow: 0px 3px 30px -9px rgba(46, 126, 39, 0.75);
+// }
 
 .fltr {
     opacity: 0;

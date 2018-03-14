@@ -1,4 +1,4 @@
 ---
 title: 'Index'
-layout: default.pug
+layout: columns.pug
 ---

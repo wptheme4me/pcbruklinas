@@ -1,0 +1,172 @@
+#information {
+    position: fixed;
+    display: block;
+    box-sizing: border-box;
+    top:0; left: 0; bottom: 0;
+    width: 20%;
+    // box-shadow: 0px 3px 30px -9px rgba(131, 131, 131, 0.75);
+    // min-width: 400px;
+    // max-width: 400px;
+    // padding: 0 50px;
+    // border:1px solid red;
+
+    img {
+        display: block;
+        box-sizing: border-box;
+        padding: 100px 50px;
+        margin: 0 auto;
+        width: 100%;
+        // border:1px solid red;
+    }
+
+    .info {
+        position: relative;
+        display: block;
+        border-top: 1px solid rgb(224, 224, 224);
+        text-align: center;
+        padding: 50px 0;
+        width: 270px;
+        margin: 0 auto;
+
+        &:first-of-type {
+            border: none;
+        }
+
+        .h {
+            padding: 0 0 20px 0;
+            color: #54004B;
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+        p, a {
+            padding: 0;
+            color: #54004B;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+
+    }
+
+}
+
+#navigation {
+    position: fixed;
+    display: block;
+    box-sizing: border-box;
+    top:0; left: 80%; bottom: 0;
+    width: 20%;
+    padding: 84px 50px 0 55px;
+    // background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    box-shadow: 0px 3px 30px -9px rgba(131, 131, 131, 0.75);
+    z-index: 100;
+
+    ul, li ul {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        border: none;
+    }
+
+    .newsletter {
+        margin-top: 60px;
+        padding-top: 50px;
+    }
+}
+
+#shops {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    top:0; left: 20%; bottom: 0;
+    width: 60%;
+    padding: 20px 20px 20px 20px;
+    // background: rgb(240, 240, 240);
+
+    &:after{
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+.discount {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0 20px 20px 0;
+    color: white;
+
+    img {
+        position: relative;
+        width: 100%;
+        top:0; left: 0; bottom: 0;
+    }
+}
+
+#plan {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    top:0; left: 20%;
+    width: 80%; 
+    height: 100%;
+    margin:0; padding: 0;
+
+    // svg {
+    //     position: absolute; 
+    //     display: block;
+    //     box-sizing: border-box;
+    //     left: 0; 
+    //     top: 0;
+    //     bottom: 0;
+    //     overflow: hidden; // hide IE scroll bar
+    // }
+
+    .info {
+        // nes tik opacity užstoja kitus kvadratus
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+        font-size: 1rem;
+        fill: white;
+    }
+
+    #Piesiu polygon {
+        fill:rgba(26, 173, 58, 0.329)
+    }
+
+    #senukai {
+        fill:rgba(168, 26, 173, 0.329)
+    }
+
+    #elektromarkt {
+        fill:rgba(117, 173, 26, 0.329)
+    }
+
+    #thomas-philipps {
+        fill:rgba(173, 104, 26, 0.329)
+    }
+
+    #Piesiu polygon, #thomas-philipps, #elektromarkt, #senukai, #senukai_7_, #senukai_8_ {
+        // fill: rgba(26, 173, 58, 0.329);
+        // stroke:#f8e434;
+        // stroke-miterlimit:10;
+
+        &:hover {
+            fill: rgb(50, 144, 50);
+        }
+
+        &:hover + .info {
+            visibility: visible;
+            opacity: 1;
+            transition: all 1s;
+        }
+    }
+
+    circle {
+        fill: maroon;
+        &:hover { fill: yellow; }
+    }
+   
+}

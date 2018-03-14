@@ -1,0 +1,10 @@
+#shops
+ each page in collections.parduotuves
+  if (page.layout == 'parduotuve.pug')
+   .shop(class=page.filtras)
+    -var imgurl = page.logo || 'img/logo.png'
+    img(src= siteurl + imgurl, alt=page.title)
+    h2
+     a(href=siteurl + page.path) #{page.title}
+    p.tipas #{page.tipas}
+    p.laikas!= page.darbo_laikas

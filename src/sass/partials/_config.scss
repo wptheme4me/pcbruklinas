@@ -32,7 +32,8 @@ body {
     font-weight: normal;
     color: $text-main-color;
     line-height: 150%;
-    background: $body-color url("../img/fonas-1.png") right -100px top 200px repeat-y;
+    // background: $body-color url("../img/fonas-1.png") right -100px top 200px repeat-y;
+    background: $body-color;
 }
 
 // Mixins

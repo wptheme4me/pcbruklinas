@@ -1,0 +1,20 @@
+#navigation
+ ul
+  li 
+   a(href=siteurl + 'akcijos') Akcijos, naujienos
+  li 
+   a(href=siteurl + '') Parduotuvės
+   ul
+    each pavadinimas, filtras in { 'aksesuarai': 'Aksesuarai, dovanos', 'avaline': 'Avalinė, galanterija', 'drabuziai': 'Drabužiai', 'juvelyrika': 'Juvelyrika', 'kanceliarines': 'Kanceliarinės', 'kosmetika': 'Kosmetika,sveikata', 'maistas-gerimai': 'Maisto prekės, gėrimai', 'technika': 'Namų prekės, technika', 'sporto-laisvalaikio': 'Sportas, laisvalaikis', 'specializuotos': 'Specializuotos prekės', 'vaikams': 'Vaikų prekės', 'shop': 'Visos parduotuvės' }
+     li(onclick="changes('" + filtras + "')") #{pavadinimas}
+  li 
+     a(href=siteurl + '#') Paslaugos
+  li 
+     a(href=siteurl + '#') Pramogos
+  li 
+     a(href=siteurl + '#') Restoranai
+
+ .newsletter 
+  form(action="#")
+   input(type="text" placeholder="El.pašto adresas")
+   input(type="submit" value="Užsakyti")

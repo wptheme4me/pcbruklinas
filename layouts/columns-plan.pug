@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="lt")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{sitename} - #{title}
+        link(href="https://fonts.googleapis.com/css?family=Oswald:300,400&amp;subset=latin-ext" rel="stylesheet")
+        link(rel="stylesheet", href=siteurl + "/css/style.css")
+        //- script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
+        
+    body
+      block shop_information
+       include ./columns/shop_information.pug
+       
+      block navigation
+       include ./columns/navigation.pug
+       
+      block main
+       include ./columns/plan.pug
+
+      script(src="js/filter.js")
+    
+       

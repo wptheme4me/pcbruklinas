@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400px" height="400px" style='position:absolute;top:0;left:0;border:10px solid green;'>
+    <text y='70%' x='10%'>                                   
+        <tspan>How doth the little crocodile</tspan>
+        <tspan dy='1em' x='10%'>Improve his shining tail,</tspan>
+        <tspan dy='1em' x='10%'>And pour the waters of the Nile</tspan>
+        <tspan dy='1em' x='10%'>On every golden scale!</tspan>
+    </text>
+    <text y='10%' x='20%'>                                   
+        <tspan>Gali būti legend paaiškinimams</tspan>
+        <tspan dy='1.2em' x='20%'>I-V:</tspan><tspan dx='30px'> 10:00 - 22:00</tspan>
+        <tspan dy='1.2em' x='20%'>VI-VII:</tspan><tspan dx='14px'> 10:00 - 18:00</tspan>
+    </text>
+    <text y="50%" x="50">
+        <tspan>How cheerfully </tspan>
+        <tspan dy='1em'>How neatly </tspan>
+        <tspan dy='1em'>And welcomes</tspan>
+        <tspan dy='1em'>With gently</tspan>
+    </text>
+</svg>
