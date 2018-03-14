@@ -4,7 +4,7 @@ var sortShops = Array.prototype.filter.call(shops, function (el, i, aa) {
     el.style = 'background:green'
     // el.className += ' bla'
   }
-  console.log(i + ': ' + el)
+  // console.log(i + ': ' + el)
 })
 
 var plan = document.getElementById('svg')
@@ -100,7 +100,7 @@ var shopList = [
 
 for (var i in shopList) {
   // error handler
-  console.log(shopList[i])
+  // console.log(shopList[i])
   var shopName = shopList[i]
   var ee = document.getElementById(shopName.id)
   var namespace = 'http://www.w3.org/2000/svg'
